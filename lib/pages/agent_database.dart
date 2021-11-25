@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:head_office_app/services/input_box.dart';
+import 'package:head_office_app/services/navi_bar.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+class AgentDatabase extends StatefulWidget {
+
+  @override
+  _AgentDatabaseState createState() => _AgentDatabaseState();
+}
+
+class _AgentDatabaseState extends State<AgentDatabase> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body: Column(
+            children: [
+              SizedBox(
+                height: 30.h,
+              ),
+              Navi_bar(),
+              Text('Agent  Database', style: TextStyle(fontFamily: 'Comfortaa', fontWeight: FontWeight.w400, fontSize: 48.sp, color: Colors.black,)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(115.w, 0, 0, 0),
+                    child: Column(
+                      children: [
+                        InputBox(text: 'Select Branch by District', isObs: false),
+                        SizedBox(height: 75.w,),
+                        InputBox(text: 'Select Branch by Branch ID', isObs: false),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0, 0, 115.w, 0),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 120.h,),
+                        Text('Calender', style: TextStyle(fontFamily: 'Comfortaa', fontWeight: FontWeight.w400, fontSize: 18.sp, color: Color.fromRGBO(0, 0, 0, 1),),),
+                        Container(
+                          height: 300.h,
+                          width: 250.w,
+                          child: SfCalendar(view: CalendarView.month,),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 50.h,
+                width: 150.w,
+                child: FlatButton(
+                  onPressed: (){Navigator.pop(context);},
+                  child: Text('BACK', style: TextStyle(fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 14.sp),),
+                  color: const Color.fromARGB(255, 160, 213, 244),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(48.r)),
+                ),
+              )
+            ]
+        )
+    );
+  }
+}
