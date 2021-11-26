@@ -50,7 +50,7 @@ class _BranchDetailsState extends State<BranchDetails> {
                 padding: EdgeInsets.fromLTRB(115.w, 0, 0, 0),
                 child: Column(
                   children: [
-                    Text('Select by Branch', style: TextStyle(fontSize: 18.sp, fontFamily: 'Comfortaa', fontWeight: FontWeight.w400),),
+                    Text('Select District', style: TextStyle(fontSize: 18.sp, fontFamily: 'Comfortaa', fontWeight: FontWeight.w400),),
                     DropdownButton(
                       value: binValue,
                       icon: const Icon(Icons.arrow_drop_down),
@@ -101,6 +101,7 @@ class _BranchDetailsState extends State<BranchDetails> {
                       onTap: (){},
                     ),
                     SizedBox(height: 75.w,),
+                    Text('Select Branch', style: TextStyle(fontSize: 18.sp, fontFamily: 'Comfortaa', fontWeight: FontWeight.w400),),
                     DropdownButton(
                       value: districtVal,
                       icon: const Icon(Icons.arrow_drop_down),
@@ -123,9 +124,21 @@ class _BranchDetailsState extends State<BranchDetails> {
                       }).toList(),
                       onTap: (){},
                     ),
+                    SizedBox(height: 10.h,),
+                    SizedBox(
+                      height: 25.h,
+                      width: 50.w,
+                      child: FlatButton(
+                        onPressed: (){Navigator.popAndPushNamed(context, '/specific_branch_details');},
+                        child: Text('GO', style: TextStyle(fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 14.sp),),
+                        color: const Color.fromARGB(255, 160, 213, 244),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(48.r)),
+                      ),
+                    ),
                   ],
                 ),
               ),
+
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 115.w, 0),
                 child: Column(
@@ -147,7 +160,7 @@ class _BranchDetailsState extends State<BranchDetails> {
             width: 150.w,
             child: FlatButton(
               onPressed: (){Navigator.pop(context);},
-              child: Text('BACK', style: TextStyle(fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 14.sp),),
+              child: Text('BACK', style: TextStyle(fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 14.sp, color: Colors.white),),
               color: const Color.fromARGB(255, 160, 213, 244),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(48.r)),
             ),

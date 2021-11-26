@@ -24,14 +24,24 @@ class _AgentDatabaseState extends State<AgentDatabase> {
               Text('Agent  Database', style: TextStyle(fontFamily: 'Comfortaa', fontWeight: FontWeight.w400, fontSize: 48.sp, color: Colors.black,)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.fromLTRB(115.w, 0, 0, 0),
+                    padding: EdgeInsets.fromLTRB(115.w, 40.h, 0, 0),
                     child: Column(
                       children: [
-                        InputBox(text: 'Select Branch by District', isObs: false),
-                        SizedBox(height: 75.w,),
-                        InputBox(text: 'Select Branch by Branch ID', isObs: false),
+                        InputBox(text: 'Select Agent by Employee Number', isObs: false),
+                        SizedBox(height: 16.h,),
+                        SizedBox(
+                          height: 50.h,
+                          width: 150.w,
+                          child: FlatButton(
+                            onPressed: (){},
+                            child: Text('Search', style: TextStyle(fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 14.sp),),
+                            color: const Color.fromARGB(255, 160, 213, 244),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(48.r)),
+                          ),
+                        )
                       ],
                     ),
                   ),
