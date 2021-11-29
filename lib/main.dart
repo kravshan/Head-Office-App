@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:head_office_app/pages/login.dart';
@@ -10,6 +9,10 @@ import 'package:head_office_app/pages/agent_database.dart';
 import 'package:head_office_app/pages/specific_branch_details.dart';
 import 'package:head_office_app/pages/staff_details.dart';
 import 'package:head_office_app/pages/submitted_for_approv.dart';
+import 'package:head_office_app/pages/approv_summary.dart';
+import 'package:head_office_app/pages/approv_or_reject.dart';
+import 'package:head_office_app/pages/confirmed_case.dart';
+import 'package:head_office_app/pages/rejected.dart';
 
 void main() => runApp(ScreenUtilInit(
     designSize: const Size(1280, 720),
@@ -25,6 +28,10 @@ void main() => runApp(ScreenUtilInit(
         '/specific_branch_details': (context) => Specific_Branch_Details(),
         '/staff_details': (context) => Staff_Details(),
         '/submit_for_approv': (context) => Sub_For_Approv(),
+        '/approve_summary': (context) => Approve_summary(),
+        '/approv_or_reject': (context) => Approv_or_reject(),
+        '/confirmed_case': (context) => Confirmed_Case(),
+        '/rejected': (context) => Rejected(),
       },
     )
   )

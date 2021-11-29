@@ -119,7 +119,7 @@ class _Staff_DetailsState extends State<Staff_Details> {
             height: 50.h,
             width: 150.w,
             child: FlatButton(
-              onPressed: (){Navigator.pop(context);},
+              onPressed: (){Navigator.pushNamedAndRemoveUntil(context, '/home_screen', (route) => false);},
               child: Text('BACK', style: TextStyle(fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 14.sp, color: Colors.white),),
               color: const Color.fromARGB(255, 160, 213, 244),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(48.r)),
