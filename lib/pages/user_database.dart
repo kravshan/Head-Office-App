@@ -35,7 +35,7 @@ class _UserDatabaseState extends State<UserDatabase> {
                           height: 50.h,
                           width: 150.w,
                           child: FlatButton(
-                            onPressed: (){},
+                            onPressed: (){Navigator.popAndPushNamed(context, '/specific_branch_details');},
                             child: Text('Search', style: TextStyle(fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 14.sp),),
                             color: const Color.fromARGB(255, 160, 213, 244),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(48.r)),
